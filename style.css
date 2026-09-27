@@ -1,0 +1,682 @@
+/* GLOBAL STYLES & RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* TOP HEADER / CONTACT BAR - IKOSOYE NEZA */
+.top-bar {
+    background-color: #0b2545;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 10px 0;
+    border-bottom: 2px solid #d4af37;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Buza ikubirana ku murongo umwe */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.contact-info span {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contact-info i {
+    color: #d4af37;
+}
+
+.quick-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quick-links a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.quick-links a:hover {
+    color: #d4af37;
+}
+
+/* MAIN NAVIGATION BAR */
+.main-header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 30px;
+    color: #0b2545;
+}
+
+.school-name {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: #0b2545;
+    line-height: 1.1;
+}
+
+.tagline {
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.navbar > ul {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar a {
+    padding: 10px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0b2545;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    display: block;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #d4af37;
+}
+
+/* DROPDOWN MENU - IKOSOYE NEZA */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-top: 3px solid #d4af37;
+    border-radius: 0 0 6px 6px;
+    display: none;
+    flex-direction: column;
+    padding: 8px 0;
+    z-index: 999;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    padding: 10px 18px;
+    color: #333333;
+    font-size: 13px;
+    border-bottom: 1px solid #f0f0f0;
+    white-space: nowrap;
+}
+
+.dropdown-menu li:last-child a {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f8f9fa;
+    color: #0b2545;
+    padding-left: 22px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.btn-apply {
+    background-color: #d4af37;
+    color: #0b2545;
+    padding: 9px 20px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-apply:hover {
+    background-color: #0b2545;
+    color: #ffffff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    color: #0b2545;
+    cursor: pointer;
+}
+
+/* HERO / BANNER SLIDER */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.hero-slider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    max-width: 700px;
+}
+
+.hero-badge {
+    background-color: #d4af37;
+    color: #0b2545;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.slide-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.slide-content p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #e0e0e0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-hero-primary {
+    background-color: #d4af37;
+    color: #0b2545;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-primary:hover {
+    background-color: #ffffff;
+}
+
+.btn-hero-secondary {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 23px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-hero-secondary:hover {
+    background-color: #ffffff;
+    color: #0b2545;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(11, 37, 69, 0.6);
+    color: #ffffff;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: #d4af37;
+    color: #0b2545;
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+/* ACADEMICS & LEVELS SECTION */
+.academics-section {
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: #0b2545;
+    font-weight: 700;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: #d4af37;
+    margin: 12px auto;
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 15px;
+}
+
+.academic-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.academic-card {
+    background-color: #f8f9fa;
+    border: 1px solid #eef0f2;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.academic-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(11, 37, 69, 0.1);
+    border-color: #d4af37;
+}
+
+.academic-card.featured {
+    border: 2px solid #d4af37;
+    background-color: #ffffff;
+}
+
+.featured-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d4af37;
+    color: #0b2545;
+    padding: 3px 12px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #0b2545;
+    color: #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto 20px auto;
+}
+
+.academic-card h3 {
+    font-size: 20px;
+    color: #0b2545;
+    margin-bottom: 12px;
+}
+
+.academic-card p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: #0b2545;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.card-link:hover {
+    color: #d4af37;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: 70px 0;
+    background-color: #f8f9fa;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    border-top: 4px solid #d4af37;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.vision-icon {
+    font-size: 32px;
+    color: #0b2545;
+    margin-bottom: 15px;
+}
+
+.about-card h3 {
+    color: #0b2545;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.contact-card, .contact-form-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #0b2545;
+}
+
+.contact-card h3, .contact-form-card h3 {
+    color: #0b2545;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.headmaster-name {
+    font-size: 18px;
+    color: #0b2545;
+}
+
+.headmaster-title {
+    color: #d4af37;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 12px;
+    color: #555;
+    font-size: 14px;
+}
+
+.contact-details i {
+    color: #d4af37;
+    width: 20px;
+}
+
+.contact-details a {
+    color: #0b2545;
+    font-weight: 600;
+}
+
+.contact-details a:hover {
+    color: #d4af37;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #0b2545;
+}
+
+.btn-send {
+    background-color: #0b2545;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.btn-send:hover {
+    background-color: #d4af37;
+    color: #0b2545;
+}
+
+/* FOOTER SECTION */
+.main-footer {
+    background-color: #0b2545;
+    color: #ffffff;
+    padding-top: 60px;
+    border-top: 4px solid #d4af37;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 35px;
+    padding-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: #d4af37;
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #d4af37;
+}
+
+.footer-col p {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul a {
+    color: #cccccc;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul a:hover {
+    color: #d4af37;
+    padding-left: 5px;
+}
+
+.footer-col i {
+    color: #d4af37;
+    margin-right: 8px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #d4af37;
+    color: #0b2545;
+}
+
+/* FOOTER BOTTOM BAR */
+.footer-bottom {
+    background-color: #051427;
+    padding: 18px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 13px;
+    color: #aaaaaa;
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.developer-credit strong {
+    color: #d4af37;
+}

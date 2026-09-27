@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS BIGUGU - Official Website</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP HEADER / CONTACT BAR -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <span><i class="fas fa-phone-alt"></i> +250 783 421 323</span>
+                <span><i class="fas fa-envelope"></i> tmathiass2008@gmail.com</span>
+                <span><i class="fas fa-map-marker-alt"></i> Rwankuba, Karongi, Western Province, Rwanda</span>
+            </div>
+            <div class="quick-links">
+                <a href="#portal"><i class="fas fa-user-graduate"></i> Student Portal</a>
+                <a href="#elearning"><i class="fas fa-laptop-code"></i> E-Learning</a>
+                <a href="#library"><i class="fas fa-book"></i> E-Library</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- LOGO / BRANDING -->
+            <a href="index.html" class="logo">
+                <i class="fas fa-school logo-icon"></i>
+                <div class="logo-text">
+                    <span class="school-name">GS BIGUGU</span>
+                    <span class="tagline">Excellence in Education & Character</span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION MENU -->
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#about">About Us <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#vision-mission">Vision & Mission</a></li>
+                            <li><a href="#leadership">School Leadership</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#academics">Academics <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#primary">Primary Education</a></li>
+                            <li><a href="#olevel">Ordinary Level (O'Level)</a></li>
+                            <li><a href="#alevel">Advanced Level (A'Level - MEG)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#admissions">Admissions <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#requirements">Entry Requirements</a></li>
+                            <li><a href="#fees">Fees Structure</a></li>
+                            <li><a href="#how-to-apply">How to Apply</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- APPLY NOW BUTTON -->
+            <div class="header-btn">
+                <a href="#apply" class="btn-apply"><i class="fas fa-paper-plane"></i> Apply Now</a>
+            </div>
+
+            <!-- MOBILE MENU TOGGLE ICON -->
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO / BANNER SECTION -->
+    <section class="hero-section" id="home">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="slide-bg" style="background-image: linear-gradient(rgba(11, 37, 69, 0.7), rgba(11, 37, 69, 0.7)), url('gsbigugu.png');"></div>
+                <div class="container slide-content">
+                    <span class="hero-badge">Welcome to GS BIGUGU</span>
+                    <h1>Excellence in Education & Moral Character</h1>
+                    <p>Offering complete Primary, O'Level, and A'Level (MEG) education led by Headmaster Tugirimana Mathias.</p>
+                    <div class="hero-buttons">
+                        <a href="#admissions" class="btn-hero-primary"><i class="fas fa-user-plus"></i> Admissions Open</a>
+                        <a href="#about" class="btn-hero-secondary"><i class="fas fa-info-circle"></i> Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-bg" style="background-image: linear-gradient(rgba(11, 37, 69, 0.7), rgba(11, 37, 69, 0.7)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200');"></div>
+                <div class="container slide-content">
+                    <span class="hero-badge">Quality Academic Programs</span>
+                    <h1>Mathematics, Economics & Geography (MEG)</h1>
+                    <p>Preparing future leaders with high academic standards in Karongi, Western Province.</p>
+                    <div class="hero-buttons">
+                        <a href="#academics" class="btn-hero-primary"><i class="fas fa-book-open"></i> Our Programs</a>
+                        <a href="#contact" class="btn-hero-secondary"><i class="fas fa-envelope"></i> Contact Headmaster</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <button class="slider-btn prev-btn" id="prevSlide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next-btn" id="nextSlide"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <!-- ACADEMICS & LEVELS SECTION -->
+    <section class="academics-section" id="academics">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic Levels & Combinations</h2>
+                <div class="divider"></div>
+                <p>GS BIGUGU provides holistic education from primary foundation to advanced secondary levels.</p>
+            </div>
+
+            <div class="academic-cards">
+                <!-- Primary School -->
+                <div class="academic-card">
+                    <div class="card-icon"><i class="fas fa-child"></i></div>
+                    <h3>Primary Education</h3>
+                    <p>Strong foundation in literacy, numeracy, science, and core moral values for young learners.</p>
+                    <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Ordinary Level -->
+                <div class="academic-card">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Ordinary Level (O'Level)</h3>
+                    <p>Comprehensive secondary curriculum preparing students for national exams and specialization.</p>
+                    <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Advanced Level (MEG) -->
+                <div class="academic-card featured">
+                    <div class="featured-badge">Featured Combination</div>
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>A'Level - MEG</h3>
+                    <p><strong>Mathematics - Economics - Geography</strong>. A prestigious track for analytical and social science careers.</p>
+                    <a href="#contact" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>About GS BIGUGU</h2>
+                <div class="divider"></div>
+                <p>Learn more about our heritage, values, and leadership.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-eye vision-icon"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be a leading educational institution producing holistic, skilled, and morally upright citizens in Rwanda.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-bullseye vision-icon"></i>
+                    <h3>Our Mission</h3>
+                    <p>To provide high-quality education through interactive teaching, fostering discipline, and promoting academic excellence.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-user-shield vision-icon"></i>
+                    <h3>School Leadership</h3>
+                    <p>Under the stewardship of <strong>Headmaster Tugirimana Mathias</strong>, GS BIGUGU strives for continuous growth and academic distinction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact School Leadership</h2>
+                <div class="divider"></div>
+                <p>Get in touch with GS BIGUGU administration and Headmaster's office.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Headmaster Details Card -->
+                <div class="contact-card">
+                    <div class="card-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Headmaster's Office</h3>
+                    <p class="headmaster-name"><strong>Tugirimana Mathias</strong></p>
+                    <p class="headmaster-title">School Headmaster</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> <a href="tel:+250783421323">+250 783 421 323</a></p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:tmathiass2008@gmail.com">tmathiass2008@gmail.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Rwankuba, Karongi, Western Province, Rwanda</p>
+                    </div>
+                </div>
+
+                <!-- Send Message Form -->
+                <div class="contact-form-card">
+                    <h3>Send Us a Message</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email or Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="Your Message / Inquiry..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-send"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <!-- Col 1: About School -->
+            <div class="footer-col">
+                <h3>GS BIGUGU</h3>
+                <p>Empowering minds and building character in Rwankuba, Karongi District, Western Province of Rwanda.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                    <li><a href="#academics"><i class="fas fa-chevron-right"></i> Academics & MEG</a></li>
+                    <li><a href="#admissions"><i class="fas fa-chevron-right"></i> Admissions</a></li>
+                    <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Academic Levels -->
+            <div class="footer-col">
+                <h3>Our Programs</h3>
+                <ul>
+                    <li><a href="#academics"><i class="fas fa-check"></i> Primary School</a></li>
+                    <li><a href="#academics"><i class="fas fa-check"></i> Ordinary Level (O'Level)</a></li>
+                    <li><a href="#academics"><i class="fas fa-check"></i> A'Level - MEG Combination</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact Summary -->
+            <div class="footer-col">
+                <h3>Get In Touch</h3>
+                <p><i class="fas fa-user"></i> <strong>HM:</strong> Tugirimana Mathias</p>
+                <p><i class="fas fa-phone-alt"></i> +250 783 421 323</p>
+                <p><i class="fas fa-envelope"></i> tmathiass2008@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Karongi, Western Province</p>
+            </div>
+        </div>
+
+        <!-- Copyright Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 <strong>GS BIGUGU</strong>. All Rights Reserved.</p>
+                <p class="developer-credit">Designed by <strong>Patrick</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
