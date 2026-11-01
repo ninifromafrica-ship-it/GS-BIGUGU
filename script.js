@@ -46,3 +46,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// =======================================================
+// 3. KODA Z'INYONGERA: GUHUZA WEBSITE NA SUPABASE DATABASE
+// =======================================================
+import { createClient } from 'https://jsdelivr.net'
+
+// Imyirondoro ya Database yawe ya nyayo
+const SUPABASE_URL = 'https://supabase.co' 
+const SUPABASE_ANON_KEY = 'sb_publishable_Dyd9Zy3VmuT9xtm8GMuijQ_PMN1chA5'
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
+
+// Kohereza amakuru muri Database iyo fomu itanzwe
+document.addEventListener('DOMContentLoaded', () => {
+    const signupForm = document.getElementById('signup-form');
+    
+    if (signupForm) {
+        signupForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const usernameInput = document.getElementById('username-input').value;
+            const emailInput = document.getElementById('email-input').value;
+            
+            // Kohereza amakuru kuri Supabase
+            const { data, error } = await supabase
+                .from('users') // Izina rya table twakoze
+                .insert([{ username: usernameInput, email: emailInput }])
+            
+            if (error) {
+                alert('Byanze! Error: ' + error.message);
+                console.error(error);
+            } else {
+                alert('Byakunze! Umukoresha yajyeze muri database ya GS BIGUGU.');
+                signupForm.reset(); // Guhanagura fomu
+            }
+        });
+    }
+});
